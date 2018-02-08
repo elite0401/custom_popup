@@ -1,0 +1,924 @@
+{
+  "current": {
+    "license_key": "bU9NVkw1MHRUTktWdVlQMGZVczQ1YTBmTlFFTEFzV1NTQlhtRzV5ZXg4dmJROTJERGFybHlSTlNoa0RUTEo4aTo65oYufZ0aCha1Soj1E5n7Kg==",
+    "app_product_reviews_enabled": "loox_reviews",
+    "yotpo_app_key": "",
+    "app_infinite_options_enabled": "",
+    "app_uploadery_enabled": "",
+    "ajax_cart_method": "page",
+    "cart_font_size": "big",
+    "cart_notes_enable": true,
+    "add_to_cart_float_animation": false,
+    "cart_display_continue_shopping_btn": "hidden",
+    "color_primary": "#393939",
+    "color_secondary": "#41cd62",
+    "color_text": "#333333",
+    "color_bg": "#ffffff",
+    "color_borders": "#e0e0e0",
+    "color_links": "#393939",
+    "color_menu": "#393939",
+    "color_menu_bg": "#ffffff",
+    "color_submenu": "#393939",
+    "color_submenu_bg": "#ffffff",
+    "custom_product_colors": false,
+    "color_add_to_cart_btn_bg": "#41cd62",
+    "color_add_to_cart_btn_text": "#fff",
+    "color_bg_alt": "#090909",
+    "color_text_alt": "#fff",
+    "color_discount": "#f53333",
+    "404_title_size": "big",
+    "404_title_color": "#000",
+    "404_description_color": "#000",
+    "404_horizontal_align": "align-h-center",
+    "404_vertical_align": "align-v-center",
+    "not_found_page_background_image": "",
+    "404_background_color": "#fff",
+    "show_multiple_currencies": false,
+    "currency_format": "money_with_currency_format",
+    "supported_currencies": "INR GBP CAD USD AUD EUR JPY",
+    "default_currency": "GBP",
+    "countdown_offer_enabled": true,
+    "countdown_offer_repeat": true,
+    "deal_of_the_day_enabled": false,
+    "deal_of_the_day_display": "all",
+    "deal_of_the_day_image_position": "right",
+    "deal_of_the_day_discount_percentage_color": "#f53333",
+    "deal_of_the_day_price_color": "#41cd62",
+    "deal_of_the_day_text": "DEAL OF THE DAY",
+    "deal_of_the_day_countdown_color": "#41cd62",
+    "deal_of_the_day_product_text": "DEAL OF THE DAY ENDS IN",
+    "deal_of_the_day_progressbar_color": "#f53333",
+    "favicon": "shopify:\/\/shop_images\/Fevicon.png",
+    "fixed_header": "all",
+    "header_height": "standard",
+    "product_card_title_style": "2_rows",
+    "margin_on_mobile": false,
+    "product_card_height": "255px",
+    "layout_background_type": "disable",
+    "layout_background_pattern_image_picker": "",
+    "layout_background_image_picker": "",
+    "background_gradient_rotation": 0,
+    "layout_gradient_first_color": "#000",
+    "layout_gradient_second_color": "#fff",
+    "password_page_title": "",
+    "custom_scripts": "",
+    "modal_type": "disable",
+    "modal_display_delay_seconds": "2",
+    "modal_days": "2",
+    "modal_display": "all",
+    "modal_border_color": "#000",
+    "modal_border_size": 0,
+    "newsletter_modal_test_mode": false,
+    "newsletter_modal_popup_form": true,
+    "newsletter_modal_popup_name_field": false,
+    "newsletter_modal_image_picker": "",
+    "newsletter_modal_image_position": "left",
+    "newsletter_modal_image_alt_text": "",
+    "newsletter_modal_title": "SIGN UP TODAY!",
+    "newsletter_modal_text": "You can write the headline and text for your newsletter popup in the theme settings (Newsletter section). You can also control how often the popup is displayed or disable it entirely.",
+    "newsletter_modal_btn_text": "SIGN UP!",
+    "newsletter_modal_text_alignment": "left",
+    "pa_modal_size": 700,
+    "pa_modal_product_info_width": 400,
+    "pa_modal_product": "",
+    "pa_modal_text_alignment": "left",
+    "pa_modal_image_position": "center",
+    "pa_modal_title": "Some title",
+    "pa_text_rich": "",
+    "pa_modal_btn_text": "Go to product",
+    "pa_modal_explosive_offer": false,
+    "shipping_calculator": false,
+    "shipping_calculator_heading": "Get shipping estimates",
+    "shipping_calculator_default_country": "United States",
+    "shipping_calculator_submit_button_label": "Calculate shipping",
+    "shipping_calculator_submit_button_label_disabled": "Calculating...",
+    "social_facebook_link": "https:\/\/www.facebook.com\/Oulala-Deals-155830621647944\/",
+    "social_twitter_link": "",
+    "social_instagram_link": "",
+    "social_tumblr_link": "",
+    "social_pinterest_link": "",
+    "social_youtube_link": "",
+    "social_snapchat_link": "",
+    "social_icons_menu_drawer": true,
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "share_gplus": true,
+    "og_image": "",
+    "og_title": "",
+    "og_description": "",
+    "font_family_headings": "Google_Work+Sans_600_sans",
+    "font_family_headings_other": "none",
+    "font_size_headings": "26px",
+    "font_family_base": "Google_Lato_400_sans",
+    "font_family_base_other": "none",
+    "font_size_base": "16px",
+    "ps_modal_enable": true,
+    "ps_modal_size": 600,
+    "ps_modal_display": "all",
+    "ps_modal_bg_image_picker": "",
+    "ps_modal_product": "",
+    "ps_modal_title": "Interested in fast shipping at £1 ?",
+    "ps_modal_sub_title": "Get access to Oulala Prime during 7 days for £1 only!",
+    "ps_modal_image": "shopify:\/\/shop_images\/full.png",
+    "ps_modal_image_width": "one-whole",
+    "ps_text_details": "",
+    "ps_modal_yes_btn_text": "Yes, I want the £1 delivery",
+    "ps_modal_atc_action": "add_to_cart_redirect",
+    "ps_modal_no_btn_text": "No thanks, i will pay full price",
+    "ps_modal_dismiss_action": "page",
+    "ps_text_other_details": "<p style=\"font-size:12px\">at the end of trial of 7 first days your membership at Oulala Prime will be automatically renewed at £4.90 per month (see <a href=\"\/pages\/legal-notice\" title=\"Legal notice\">T&Cs<\/a>) You can modify or cancel your membership anytime directly from your personal account.<\/p>",
+    "ps_product_tag": "product_checkout_popup",
+    "ps_cart_tag": "cart_checkout_popup",
+    "option_color_swatches": "Color, Colour",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/logo-without-label_cede81a1-b429-4cdc-812e-f7426d3becac.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Helvetica Neue",
+    "checkout_body_font": "Helvetica Neue",
+    "checkout_accent_color": "#41cd62",
+    "checkout_button_color": "#41cd62",
+    "checkout_error_color": "#ff6d6d",
+    "sticky_add_to_cart": true,
+    "add_to_cart_bar_enabled": true,
+    "add_to_cart_bar_background_color": "#fff",
+    "add_to_cart_bar_text_color": "#000",
+    "add_to_cart_bar_price_color": "#000",
+    "deal_of_the_day_hide_title": false,
+    "deal_of_the_day_discount_percentage": true,
+    "deal_of_the_day_ends_in_text": "ENDS IN",
+    "sections": {
+      "topbar": {
+        "type": "topbar",
+        "settings": {
+          "display": "all",
+          "social_icons": true,
+          "facebook_buttons_position": "left",
+          "facebook_page_link": "https:\/\/fr-fr.facebook.com\/Oulala-Deals-155830621647944\/",
+          "show_facebook_like_button": false,
+          "show_facebook_share_button": false,
+          "message_text": "FREE SHIPPING ON ORDERS OVER £80",
+          "is_phone_number": false,
+          "message_link_text": "",
+          "message_link": "shopify:\/\/collections\/black-week",
+          "color_bg": "#191919",
+          "color_text": "#c7ac69",
+          "color_button_bg": "transparent",
+          "color_button_border": "#c7ac69",
+          "color_button_text": "#c7ac69"
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo_text": "",
+          "logo_link": "",
+          "logo_image": "shopify:\/\/shop_images\/logo-without-label_cede81a1-b429-4cdc-812e-f7426d3becac.png",
+          "logo_max_width_desktop": 300,
+          "logo_margin": 0,
+          "logo_margin_left": 30,
+          "logo_image_mobile": "shopify:\/\/shop_images\/logo-without-label_cede81a1-b429-4cdc-812e-f7426d3becac.png",
+          "logo_max_width_mobile": 300,
+          "logo_margin_mobile": 0,
+          "menu_type": "text-menu",
+          "display_product_price": false,
+          "submenu_columns": "1",
+          "display_menu_word_mobile": false,
+          "menu_word_mobile": "MENU",
+          "display_profile_icon": true,
+          "hide_account_link": false,
+          "switch_account_search_position": false,
+          "cart_button_type": "icon"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "1509965527870": {
+            "type": "image",
+            "settings": {
+              "title": "Footer image",
+              "image": "shopify:\/\/shop_images\/footer_about_us_img_new.jpg",
+              "image_link": "shopify:\/\/pages\/commitments",
+              "align_text": "left",
+              "display": "all"
+            }
+          },
+          "1509965514633": {
+            "type": "content",
+            "settings": {
+              "title": "Footer content",
+              "text": "<p>Oulala Deals was founded by people passionate with innovation. Accustomed to major international fairs, we travel the world to find the best products, which will change your daily life!<\/p>",
+              "button_label": "Read More",
+              "button_link": "shopify:\/\/pages\/commitments",
+              "align_text": "left",
+              "display": "all"
+            }
+          },
+          "1509965064471": {
+            "type": "menu",
+            "settings": {
+              "title": "Footer menu",
+              "menu": "footer",
+              "align_text": "left",
+              "align_items": "left",
+              "left_margin": "0",
+              "display": "all",
+              "is_collapsible": false
+            }
+          }
+        },
+        "block_order": [
+          "1509965527870",
+          "1509965514633",
+          "1509965064471"
+        ],
+        "settings": {
+          "display_border": false,
+          "footer_width_size": "normal",
+          "mobile_display_footer_cart_product": false,
+          "color_bg": "#ffffff",
+          "color_headings": "#393939",
+          "color_text": "#393939",
+          "color_links": "#393939",
+          "color_menu_items": "#393939",
+          "color_button_bg": "transparent",
+          "color_button_border": "#393939",
+          "color_button_text": "#393939",
+          "display_social": true,
+          "powered_by": true,
+          "payment_icons": true,
+          "color_social_bg": "#0d0d0d",
+          "color_social_icons": "#ffffff",
+          "theme_copyright": true,
+          "affiliate_link": ""
+        }
+      },
+      "1496645688611": {
+        "type": "slideshow",
+        "blocks": {
+          "1496645688611-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/home-slider_new_img.jpg",
+              "display_on": "desktop_mobile",
+              "title": "Only the best  <em>Deals<\/em><br><span>up to<\/span> 70% <span>off<\/span>",
+              "subtitle": "",
+              "text": "<p><\/p>",
+              "primary_button_label": "BROWSE ALL OFFERS!",
+              "primary_button_link": "shopify:\/\/collections\/black-week",
+              "secondary_button_label": "",
+              "secondary_button_link": "",
+              "alignment": "center",
+              "text_location": "center",
+              "text_alignment": "center",
+              "color_title": "#ffffff",
+              "color_subtitle": "#c7ac69",
+              "color_text": "#ffffff",
+              "image_overlay_opacity": "0.35",
+              "color_image_overlay": "rgba(0,0,0,0)",
+              "primary_button_border_color": "rgba(0,0,0,0)",
+              "primary_button_bg_color": "#c7ac69",
+              "primary_button_text_color": "#ffffff",
+              "secondary_button_border_color": "#fff",
+              "secondary_button_bg_color": "transparent",
+              "secondary_button_text_color": "#fff"
+            }
+          }
+        },
+        "block_order": [
+          "1496645688611-0"
+        ],
+        "settings": {
+          "autoplay": true,
+          "autoplay_speed": "5000",
+          "slideshow_height": "medium",
+          "title_text_size": "large",
+          "subtitle_text_size": "large",
+          "content_text_size": "small"
+        }
+      },
+      "1496656693081": {
+        "type": "icon-list",
+        "blocks": {
+          "1496656693081-0": {
+            "type": "icon_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/plane-gold.png",
+              "icon": "icon-plane.png",
+              "text": "Fast Delivery"
+            }
+          },
+          "1496656693081-2": {
+            "type": "icon_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/qualite-gold.png",
+              "icon": "icon-badge.png",
+              "text": "Premium Quality"
+            }
+          },
+          "1496656693081-3": {
+            "type": "icon_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/warranty-gold.png",
+              "icon": "icon-shield.png",
+              "text": "Secure Checkout"
+            }
+          }
+        },
+        "block_order": [
+          "1496656693081-0",
+          "1496656693081-2",
+          "1496656693081-3"
+        ],
+        "settings": {
+          "title": "",
+          "inverted": true
+        }
+      },
+      "1497965699291": {
+        "type": "newsletter",
+        "settings": {
+          "inverted": false,
+          "title": "GET OUR DAILY DEAL VIA INBOX",
+          "text": "<p>Receive our promotions to your inbox. Subscribe today!<\/p>",
+          "button_text": "SUBSCRIBE"
+        }
+      },
+      "1497967594955": {
+        "type": "featured-collection",
+        "blocks": {
+          "1509086972051": {
+            "type": "collection",
+            "settings": {
+              "collection": "best-sales",
+              "display_number_of_products_mobile": "2",
+              "display_number_of_rows_mobile": "1",
+              "display_number_of_products_desktop": "4",
+              "display_number_of_rows_desktop": "1",
+              "btn_action": "add_to_cart_redirect",
+              "btn_text": "Add to Cart"
+            }
+          }
+        },
+        "block_order": [
+          "1509086972051"
+        ],
+        "settings": {
+          "title": "OFFERS ENDING SOON!",
+          "add_to_cart": "below_the_product",
+          "second_image_on_hover": false
+        }
+      },
+      "1497971134137": {
+        "type": "testimonials",
+        "blocks": {
+          "1509093515823": {
+            "type": "testimonial",
+            "settings": {
+              "text": "\"One of my favorite places to buy gifts. For myself and for others!\"",
+              "image": "shopify:\/\/shop_images\/Portrait-of-middle-aged-man_134x134_crop_center_2x_753acd5a-8ba3-41fd-82d2-9a30520a123f.jpg",
+              "name": "Carl (4.5)",
+              "company": "",
+              "link": ""
+            }
+          },
+          "1510135097814": {
+            "type": "testimonial",
+            "settings": {
+              "text": "\"I always find new and exciting things here!\"",
+              "image": "shopify:\/\/shop_images\/505823812_134x134_crop_center_2x_5dd1dfe9-cba6-44e4-ac7a-0a9974902f40.jpg",
+              "name": "Sarah (4.9)",
+              "company": "",
+              "link": ""
+            }
+          },
+          "1510135141776": {
+            "type": "testimonial",
+            "settings": {
+              "text": "\"Just the best place to buy online\"",
+              "image": "shopify:\/\/shop_images\/54fe99638f761-gray-hair-portrait-xl_134x134_crop_center_2x_84fbfdd6-828a-42d4-bd56-a730f1e9fdab.jpg",
+              "name": "Samantha (4.7)",
+              "company": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1509093515823",
+          "1510135097814",
+          "1510135141776"
+        ],
+        "settings": {
+          "type": "grid",
+          "inverted": true,
+          "effect": "fade",
+          "title": ""
+        }
+      },
+      "1497973148306": {
+        "type": "separator",
+        "settings": {
+          "display": "all",
+          "color": "#dedede",
+          "height": "15px",
+          "no_margin": false
+        }
+      },
+      "1497973801821": {
+        "type": "featured-product",
+        "settings": {
+          "title": "OUR ALL TIME BESTSELLER",
+          "product": "hottop-for-men",
+          "btn_action": "product_page",
+          "btn_text": "CHECK IT OUT!",
+          "product_options_style": "swatches",
+          "display_quantity_selector": true,
+          "gallery_zoom_type": "grab",
+          "gallery_arrows": true,
+          "gallery_direction": "vertical",
+          "excerpt_word_count": "15"
+        }
+      },
+      "1498026043184": {
+        "type": "separator",
+        "settings": {
+          "display": "all",
+          "color": "#dedede",
+          "height": "5px",
+          "no_margin": true
+        }
+      },
+      "1498056121306": {
+        "type": "featured-collections",
+        "blocks": {
+          "1510591357344": {
+            "type": "collection",
+            "settings": {
+              "collection": "for-men"
+            }
+          },
+          "1510591364806": {
+            "type": "collection",
+            "settings": {
+              "collection": "for-women"
+            }
+          },
+          "1510591374696": {
+            "type": "collection",
+            "settings": {
+              "collection": "for-the-kids"
+            }
+          },
+          "1510591382618": {
+            "type": "collection",
+            "settings": {
+              "collection": "for-baby"
+            }
+          }
+        },
+        "block_order": [
+          "1510591357344",
+          "1510591364806",
+          "1510591374696",
+          "1510591382618"
+        ],
+        "settings": {
+          "title": "SPECIAL OFFERS FOR THE WHOLE FAMILY",
+          "title_style": "over",
+          "color_title": "#ffffff",
+          "hover_effect": true,
+          "image_overlay_opacity": "0.15",
+          "color_image_overlay": "#000000"
+        }
+      },
+      "page-constructor": {
+        "type": "page-constructor",
+        "blocks": {
+          "1502234545681": {
+            "type": "content",
+            "settings": {
+              "title": "Columns",
+              "content": "<p>Open this page in the theme editor and click on \"Page Constructor\" configuration in the left menu.<\/p>\n<p>Set the column width to 66.6% which means the content&nbsp;will take two&nbsp;thirds of the page&nbsp;width.<\/p>\n<p>Then create a \"Content Block\" and set its column width to 33.3% (one third).<\/p>\n<p>You will get a two-column page. There are many more column size option so that you can split your page on up to five columns.<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "align_text": "left",
+              "width": "one-third"
+            }
+          },
+          "1502235758390": {
+            "type": "content",
+            "settings": {
+              "title": "Use different type of blocks",
+              "content": "<p>There are different type of content you can display on your page using different blocks.<\/p>",
+              "button_label": "Example Button",
+              "button_link": "shopify:\/\/pages\/custom-1",
+              "align_text": "center",
+              "width": "one-whole"
+            }
+          },
+          "1502235685970": {
+            "type": "image",
+            "settings": {
+              "image": "",
+              "image_size": "768x768",
+              "crop_type": "center",
+              "link": "",
+              "width": "one-half"
+            }
+          },
+          "1502235710320": {
+            "type": "image",
+            "settings": {
+              "image": "",
+              "image_size": "768x768",
+              "crop_type": "center",
+              "link": "",
+              "width": "one-half"
+            }
+          },
+          "1502235915951": {
+            "type": "content",
+            "settings": {
+              "title": "Grid examples",
+              "content": "",
+              "button_label": "",
+              "button_link": "",
+              "align_text": "center",
+              "width": "one-whole"
+            }
+          },
+          "1502235954573": {
+            "type": "content",
+            "settings": {
+              "title": "25% A quarter",
+              "content": "<p>Example text. Can be anything. Really.<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "align_text": "left",
+              "width": "one-quarter"
+            }
+          },
+          "1502235999211": {
+            "type": "content",
+            "settings": {
+              "title": "50% Two Quarters",
+              "content": "<p>Text + call to action<\/p>",
+              "button_label": "Example button",
+              "button_link": "shopify:\/\/collections\/all",
+              "align_text": "center",
+              "width": "two-quarters"
+            }
+          },
+          "1502236076805": {
+            "type": "menu",
+            "settings": {
+              "title": "25% A quarter",
+              "menu": "footer",
+              "align_text": "right",
+              "align_items": "right",
+              "width": "one-quarter"
+            }
+          },
+          "1502751729189": {
+            "type": "clearfix",
+            "settings": {}
+          },
+          "1502236335531": {
+            "type": "content",
+            "settings": {
+              "title": "",
+              "content": "",
+              "button_label": "",
+              "button_link": "",
+              "align_text": "left",
+              "width": "one-quarter"
+            }
+          },
+          "1502236220823": {
+            "type": "content",
+            "settings": {
+              "title": "Page break",
+              "content": "<p>Sometimes you want the next column to be on a new row even if it fits to the grid. Use \"Page break (clear fix)\" block for that. Let me demonstrate this case:<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "align_text": "center",
+              "width": "one-half"
+            }
+          },
+          "1502751722156": {
+            "type": "clearfix",
+            "settings": {}
+          },
+          "1502236376074": {
+            "type": "content",
+            "settings": {
+              "title": "This is a one-third",
+              "content": "<p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/em><\/p>",
+              "button_label": "",
+              "button_link": "",
+              "align_text": "left",
+              "width": "one-third"
+            }
+          },
+          "1502236490981": {
+            "type": "content",
+            "settings": {
+              "title": "Two-thirds with less content",
+              "content": "<p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<\/em><\/p>",
+              "button_label": "",
+              "button_link": "",
+              "align_text": "left",
+              "width": "two-thirds"
+            }
+          },
+          "1502236528121": {
+            "type": "content",
+            "settings": {
+              "title": "Another two-thirds",
+              "content": "<p>It fits to the space left on this line. To make the next two-thirds column go on another line. Insert a \"Page break\" block before it.<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "align_text": "left",
+              "width": "two-thirds"
+            }
+          },
+          "1502236776881": {
+            "type": "clearfix",
+            "settings": {}
+          },
+          "1502236785633": {
+            "type": "content",
+            "settings": {
+              "title": "I'm on new line",
+              "content": "<p>Even though I could fit on&nbsp;the line above :P<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "align_text": "left",
+              "width": "two-thirds"
+            }
+          },
+          "1502236860523": {
+            "type": "content",
+            "settings": {
+              "title": "Enjoy!",
+              "content": "",
+              "button_label": "",
+              "button_link": "",
+              "align_text": "center",
+              "width": "one-whole"
+            }
+          }
+        },
+        "block_order": [
+          "1502234545681",
+          "1502235758390",
+          "1502235685970",
+          "1502235710320",
+          "1502235915951",
+          "1502235954573",
+          "1502235999211",
+          "1502236076805",
+          "1502751729189",
+          "1502236335531",
+          "1502236220823",
+          "1502751722156",
+          "1502236376074",
+          "1502236490981",
+          "1502236528121",
+          "1502236776881",
+          "1502236785633",
+          "1502236860523"
+        ],
+        "settings": {
+          "display_page_title": true,
+          "page_width": "wide",
+          "column_width": "two-thirds",
+          "content_location": "left",
+          "page_content": ""
+        }
+      },
+      "1497955494101": {
+        "type": "featured-products",
+        "blocks": {
+          "1509087029896": {
+            "type": "product",
+            "settings": {
+              "product": "goldentouch",
+              "btn_action": "add_to_cart",
+              "btn_text": "Add to Cart"
+            }
+          },
+          "1509087063927": {
+            "type": "product",
+            "settings": {
+              "product": "discomachine-led",
+              "btn_action": "add_to_cart",
+              "btn_text": "Add to Cart"
+            }
+          },
+          "1509087089281": {
+            "type": "product",
+            "settings": {
+              "product": "sublimizer-2",
+              "btn_action": "add_to_cart",
+              "btn_text": "Add to Cart"
+            }
+          },
+          "1509087153372": {
+            "type": "product",
+            "settings": {
+              "product": "leviosafairy",
+              "btn_action": "add_to_cart",
+              "btn_text": "Add to Cart"
+            }
+          }
+        },
+        "block_order": [
+          "1509087029896",
+          "1509087063927",
+          "1509087089281",
+          "1509087153372"
+        ],
+        "settings": {
+          "title": "BEST DEALS OF THE DAY",
+          "add_to_cart": "below_the_product",
+          "second_image_on_hover": false
+        }
+      },
+      "1509093837365": {
+        "type": "separator",
+        "settings": {
+          "display": "all",
+          "color": "#dedede",
+          "height": "10px",
+          "no_margin": false
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "display_vendor": false,
+          "notes_enable": false
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "breadcrumbs": false,
+          "display_banner": false,
+          "display_banner_product_title": true,
+          "display_banner_on": "all",
+          "banner_image_height": "xsmall",
+          "banner_image_alignment": "center",
+          "banner_color_title": "#fff",
+          "banner_gradient_color": "black",
+          "gallery_zoom_type": "none",
+          "gallery_arrows": true,
+          "thumbs_arrows": false,
+          "gallery_direction": "vertical",
+          "excerpt_word_count": "0",
+          "product_options_style": "dropdown",
+          "hide_variant_with_one_option": false,
+          "display_quantity_selector": true,
+          "display_vendor": false,
+          "display_collections": false,
+          "display_tags": false,
+          "display_sku": false,
+          "display_product_type": false,
+          "display_share_icons": false,
+          "display_icons": true,
+          "options_icons": "default",
+          "icon_1_text": "Limited stock",
+          "icon_1_symbol": "fa fa-free-code-camp",
+          "icon_1_image": "",
+          "icon_2_text": "Fast delivery",
+          "icon_2_symbol": "fa fa-plane",
+          "icon_2_image": "",
+          "icon_3_text": "Best quality",
+          "icon_3_symbol": "fa fa-certificate",
+          "icon_3_image": "",
+          "icon_4_text": "Safe checkout",
+          "icon_4_symbol": "fa fa-lock",
+          "icon_4_image": "",
+          "related_products": true,
+          "related_products_title": "You also may like:",
+          "related_products_count": "5",
+          "related_products_button": "hover",
+          "second_image_on_hover": false,
+          "product_form_location": "top",
+          "limit_description": "none",
+          "display_option_labels": true,
+          "options_layout": "2-column",
+          "sticky_add_to_cart": true,
+          "display_normal_add_to_cart": true,
+          "lock_add_to_cart_btn": false,
+          "price_location": false,
+          "add_to_cart_bar_enabled": true,
+          "add_to_cart_bar_background_color": "#fff",
+          "add_to_cart_bar_text_color": "#000",
+          "add_to_cart_bar_price_color": "#000",
+          "use_tabs": false,
+          "description_tab_closed": false,
+          "product_reviews": true
+        }
+      },
+      "1510135286349": {
+        "type": "featured-products",
+        "blocks": {
+          "1510135295260": {
+            "type": "product",
+            "settings": {
+              "product": "anilove",
+              "btn_action": "add_to_cart",
+              "btn_text": "Add to Cart"
+            }
+          },
+          "1510135303545": {
+            "type": "product",
+            "settings": {
+              "product": "athleticrolls",
+              "btn_action": "add_to_cart",
+              "btn_text": "Add to Cart"
+            }
+          },
+          "1510135308868": {
+            "type": "product",
+            "settings": {
+              "product": "babybear",
+              "btn_action": "add_to_cart",
+              "btn_text": "Add to Cart"
+            }
+          },
+          "1510135313316": {
+            "type": "product",
+            "settings": {
+              "product": "brightsmile",
+              "btn_action": "add_to_cart",
+              "btn_text": "Add to Cart"
+            }
+          }
+        },
+        "block_order": [
+          "1510135295260",
+          "1510135303545",
+          "1510135308868",
+          "1510135313316"
+        ],
+        "settings": {
+          "title": "Featured Products",
+          "add_to_cart": "below_the_product",
+          "second_image_on_hover": false
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "breadcrumbs": false,
+          "dispaly_filters": false,
+          "add_to_cart": "below_the_product",
+          "second_image_on_hover": false,
+          "dispaly_sorting": false,
+          "location_filter_sorting": "top",
+          "display_title": true,
+          "display_description": false,
+          "collection_title_description_alignment": "center",
+          "display_separator": false,
+          "custom_menu_title": "Menu",
+          "menu": "",
+          "custom_menu_position": "before_filters",
+          "collapse_filters_max": "5",
+          "hide_non_categorized": false,
+          "mobile_layout": "2-col",
+          "display_number_of_rows_mobile": "10",
+          "dispaly_infinite_mobile": true,
+          "desktop_layout": "4-col",
+          "display_number_of_rows_desktop": "10",
+          "dispaly_infinite_desktop": true,
+          "product_btn_action": "add_to_cart",
+          "product_btn_text": "Add to Cart"
+        }
+      }
+    },
+    "content_for_index": [
+      "1496645688611",
+      "1496656693081",
+      "1498056121306",
+      "1497971134137",
+      "1497955494101",
+      "1497973148306",
+      "1497965699291",
+      "1509093837365",
+      "1497973801821",
+      "1498026043184",
+      "1497967594955",
+      "1510135286349"
+    ]
+  }
+}

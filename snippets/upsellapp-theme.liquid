@@ -1,0 +1,305 @@
+{% capture upsell_cart_includes %}
+  {% assign upsellapp_tags = shop.metafields.smartmarketer.upsellapp_tags | split: ',' %}
+  {% assign integrate_with_recharge = shop.metafields.smartmarketer.upsellapp_with_recharge %}
+
+  {% assign product_tags = '' | split: ',' %}
+  {% assign subscription_products = '' | split: ',' %}
+  {% assign cart_products = '' | split: ',' %}
+  {% assign customer_id = '"' | append: customer.id | append: '"' %}
+
+  {% for cart_item in cart.items %}
+    {% assign product_json = cart_item.product | json | split: '---upsellapp_separator---' %}
+    {% assign cart_products = cart_products | concat: product_json %}
+
+    {% assign product_tags = product_tags | concat: cart_item.product.tags %}
+    {% assign cart_item_id = '' | append: cart_item.id %}
+
+    {% for p in cart_item.properties %}
+      {% if p.first == 'shipping_interval_frequency' %}
+        {% assign subscription_product = all_products[cart_item.product.metafields.subscriptions.original_handle] %}
+        {% if subscription_product %}
+          {% assign product_tags = product_tags | concat: subscription_product.tags %}
+          {% for subscription_variant in subscription_product.variants %}
+            {% if subscription_variant.metafields.subscriptions.discount_variant_id == cart_item_id  %}
+              {% assign subscription_product_relation = cart_item.product_id | append: '_' | append: subscription_product.id | split: ','  %}
+              {% assign subscription_products = subscription_products | concat: subscription_product_relation %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  {% if template.name == 'product' %}
+    {% assign product_id_size = '' | append: product.id | strip | size %}
+    {% if product_id_size > 0 %}
+      {% assign product_tags = product_tags | concat: product.tags %}
+      {% assign product_json = product | json | split: '---upsellapp_separator---' %}
+      {% assign cart_products = cart_products | concat: product_json %}
+      {% if product.metafields.subscriptions.subscription_id %}
+        {% assign subscription_product_relation = product.metafields.subscriptions.discount_product_id | append: '_' | append: product.id | split: ','  %}
+        {% assign subscription_products = subscription_products | concat: subscription_product_relation %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+
+  {% assign product_tags = product_tags | uniq %}
+  {% assign upsell_cart_include_upsells = 'false' %}
+  {% assign disabled_by_subscription_app = 'false' %}
+
+  {% if subscription_products.size > 0 %}
+    {% if integrate_with_recharge != 'true' %}
+      {% assign disabled_by_subscription_app = 'true' %}
+    {% endif %}
+  {% endif %}
+
+  {% for tag in product_tags %}
+    {% if upsellapp_tags contains tag %}
+      {% assign upsell_cart_include_upsells = 'true' %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign subscription_products_json = subscription_products | uniq | join: ',' %}
+  {% assign cart_products_json = cart_products | uniq | join: ',' %}
+
+{% endcapture %}
+<script>
+  (function() {
+    var ocuCallback = function(jQ) {
+        var upsellCheckoutButtonSelectors = "[name='checkout'], [href='/checkout'], form[action='/checkout'] input[type='submit'], #checkout, [name='goto_pp'], .checkout_button, button:contains('Checkout')";
+        var checkoutParams = '';
+        var checkoutParamsArray = [];
+        var requirePayPal = false;
+        var redirectTimeout = 8000;
+        var docArticle = jQ(upsellCheckoutButtonSelectors)[0];
+        var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+        var checkoutButtonState = false;
+
+        {% if upsell_cart_include_upsells == 'true' %}
+        var documentMutationObserver = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.type === 'attributes' && mutation.target === docArticle) {
+                    var checkoutButton = jQ(upsellCheckoutButtonSelectors);
+                    var dataOcuCheckoutValue = checkoutButton.attr('data-ocu-checkout');
+                    var dataDisableRechargeValue = checkoutButton.attr('data-disable-recharge');
+
+                    jQ("button:contains('Checkout')").removeAttr("onclick"); // Integration with AceCase store
+
+                    if (!dataOcuCheckoutValue) { // Integration with MyDietChief store
+                        checkoutButton.attr('data-ocu-checkout', true);
+                    }
+
+                    {% if disabled_by_subscription_app == 'false' %}
+                    if (!dataDisableRechargeValue) {
+                        checkoutButton.attr('data-disable-recharge', true);
+                        jQ('body').on('click', upsellCheckoutButtonSelectors, upsellsCheckoutRedirect);
+                    }
+                    {% endif %}
+
+                    callback();
+                }
+            });
+        });
+
+        function callback() {
+            if (typeof xh == "object" && xh.status == 200) {
+                sm7RedirectUser = function(a) {
+                    var e;
+                    if (typeof a !== "undefined") {
+                        SMAR7.util.setCookie("smar7coupon", jQ("#coupon").data("coupon"), 3600)
+                    } else {
+                        a = determineCoupon()
+                    }
+                    if (paypalTriggered) {
+                        e = jQ("[name='goto_pp']");
+                        checkoutParamsArray.push({name: 'discount', value: encodeURIComponent(a)});
+                    } else {
+                        e = jQ("[name='checkout'], [href='/checkout'], form[action='/checkout'] input[type='submit'], #checkout");
+                        checkoutParamsArray.push({name: 'discount', value: encodeURIComponent(a)});
+                    }
+                    e.click();
+                };
+            }
+        }
+
+        documentMutationObserver.observe(document, {
+            childList: true,
+            subtree: true,
+            attributes: true
+        });
+        {% endif %}
+
+        {% if upsell_cart_include_upsells == 'true' %}
+        jQ(upsellCheckoutButtonSelectors).attr('data-ocu-checkout', true);
+        {% if disabled_by_subscription_app == 'false' %}
+        jQ(upsellCheckoutButtonSelectors).attr('data-disable-recharge', true);
+        jQ('body').on('click', upsellCheckoutButtonSelectors, upsellsCheckoutRedirect);
+        {% endif %}
+        {% endif %}
+
+        function upsellsCheckoutRedirect(event) {
+            if (allowUpsellCheckout(this)) {
+                event.preventDefault();
+                var $el = jQ(event.currentTarget);
+                integrationWithOtherApps();
+
+                if(!checkoutButtonState) {
+                    checkoutButtonState = true;
+
+                    if (($el.attr('name') == 'goto_pp') && ($el.val() == 'paypal_express')) {
+                        checkoutParamsArray.push({name: $el.attr('name'), value: $el.val()});
+                        requirePayPal = true;
+                    }
+                    for (var i = 0; checkoutParamsArray.length > i; i++) {
+                        checkoutParams += checkoutParamsArray[i]['name'] + '=' + checkoutParamsArray[i]['value'];
+                        if (i + 1 != checkoutParamsArray.length) {
+                        checkoutParams += '&'
+                        }
+                    }
+
+                    ocuVerifyCurrentCartData().then(function(data, textStatus, jqXHR) {
+                        try {
+                            ocuSaveCart().then(ocuGetCart, ocuGetCart).then(function (cart, textStatus, jqXHR) {
+                                cart.subscription_products = '{{ subscription_products_json }}';
+                                cart.cart_products = [{{ cart_products_json }}];
+                                cart.customer_id = {{ customer_id }};
+                                ocuVerifyUpsells(cart);
+                            }, redirectToCheckout);
+                        } catch (e) {
+                            redirectToCheckout();
+                        }
+                    }, redirectToCheckout);
+                }
+            }
+        }
+
+        function ocuSaveCart() {
+            var $cart = jQ("form[action='/checkout'], form[action='/cart']");
+            if ($cart.length > 0) {
+                return jQ.ajax({
+                    type: 'POST',
+                    url: '/cart/update.js',
+                    timeout: redirectTimeout,
+                    dataType: 'json',
+                    data: $cart.serializeArray()
+                });
+            } else {
+                return jQ.Deferred().resolve();
+            }
+        }
+
+        function ocuGetCart() {
+            return jQ.ajax({
+                cache: false,
+                url: '/cart.js',
+                timeout: redirectTimeout,
+                dataType: 'json'
+            });
+        }
+
+        function ocuVerifyCurrentCartData() {
+            var proxy_url = '{{  shop.metafields.smartmarketer.upsellapp_proxy_url }}';
+            return jQ.ajax({
+                cache: false,
+                url: proxy_url + '/check_tags',
+                timeout: redirectTimeout,
+                dataType: 'json'
+            });
+        }
+
+        function ocuVerifyUpsells(data) {
+            var shop = ((window.Shopify && window.Shopify.shop) || '{{ shop.permanent_domain }}');
+            var landingSite = getCookie('_landing_page');
+            var referringSite = getCookie('_orig_referrer');
+
+            jQ.ajax({
+                type: 'POST',
+                url: 'https://oneclickupsell.zipify.com/checkouts/check_upsells.json',
+                timeout: redirectTimeout,
+                crossDomain: true,
+                async: true,
+                data: {
+                    shop: shop,
+                    cart: data,
+                    customer: {
+                        id: data.customer_id
+                    },
+                    landing_site: landingSite,
+                    referring_site: referringSite,
+                    require_paypal: requirePayPal
+                }
+            }).done(function (data, textStatus, jqXHR) {
+                if (data.status) {
+                    if (checkoutParams) {
+                        window.location = data.checkout_url + '?' + checkoutParams;
+                    } else {
+                        window.location = data.checkout_url;
+                    }
+                } else {
+                    redirectToCheckout();
+                }
+            }).fail(function () {
+                redirectToCheckout();
+            });
+        }
+
+        function redirectToCheckout() {
+            {% if subscription_products.size > 0 %}
+            jQ(upsellCheckoutButtonSelectors).attr('data-ocu-checkout', false);
+            jQ(upsellCheckoutButtonSelectors).attr('data-disable-recharge', false);
+            jQ(document).find(upsellCheckoutButtonSelectors).trigger('click');
+            {% else %}
+            window.location = '/checkout?' + checkoutParams;
+            {% endif %}
+        }
+
+        function integrationWithOtherApps() {
+            if (jQ('#discount').length > 0 && jQ('#discount').first().val().length > 0) { // integration with INCENTIVIZED TIME CONSTRAINT
+                checkoutParamsArray.push({name: 'discount', value: encodeURIComponent(jQ('#discount').first().val())});
+            }
+        }
+
+        function allowUpsellCheckout(el) {
+            var result = true;
+
+            {% if subscription_products.size > 0 %}
+            if (jQ(el).attr('data-ocu-checkout') != 'true') {
+                result = false;
+            }
+            {% endif %}
+            if (window.mixed_cart == true) { //integration with Recurring Orders & Subscriptions by Bold
+                result = false;
+            }
+            if (window.popup_upsell && (jQ('#upsellclosebtn').length == 0)) { // integration with Product Upsell
+                result = false;
+            }
+            if (jQ('.order-logic-sweet-alert').length > 0){ // integration with OrderLogic
+                result = false;
+            }
+            return result;
+        }
+
+        window.addEventListener("pageshow", function() {
+            checkoutButtonState = false;
+        });
+
+        window.addEventListener("pagehide", function() {
+            checkoutButtonState = false;
+        });
+
+        function getCookie(name) {
+            var matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+            return matches ? decodeURIComponent(matches[1]) : '';
+        }
+    };
+
+    var script = document.createElement('script');
+    document.head.appendChild(script);
+    script.type = 'text/javascript';
+    script.src = "//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js";
+    script.onload = function() {
+        var jq310 = window.jQuery.noConflict(true);
+        ocuCallback(jq310);
+    };
+  })();
+</script>

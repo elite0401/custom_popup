@@ -1,0 +1,21 @@
+<!-- Bold: Memberships (page) -->
+{% include 'bold_mem_helper' with 'page' %}
+<!-- end Bold code -->
+
+
+{% comment %}
+  See /sections/product-template.liquid
+{% endcomment %}
+
+{% section 'page-template' %}
+
+{{ 'jquery-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'jquery_accordion.js' | asset_url | script_tag }}
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.accordion').accordion({
+      defaultOpen: 'section1',
+      cookieName: 'accordion_nav'
+    });
+  });
+</script>

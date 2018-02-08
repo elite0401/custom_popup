@@ -1,0 +1,110 @@
+{% assign product = all_products[settings.ps_modal_product] %}
+<div class="konversion-modal konversion-modal--splash modal_shipping {% if settings.ps_modal_display == 'desktop' %}medium-down--hide{% endif %} {% if settings.ps_modal_display == 'mobile' %}large--hide{% endif %}" id="ShippingModal">
+	{% if settings.ps_modal_bg_image_picker %}
+	<style type="text/css">
+		.modal_shipping .modal-content {
+			background: url("{{settings.ps_modal_bg_image_picker | img_url: 'master'}}") no-repeat;
+			background-size: cover;
+		}
+	</style>
+	{% endif %}
+    <div class="modal-content">
+    	<div class="modal-header">
+	      <div class="modal__close js-modal-close">
+	        <button type="button" class="icon-fallback-text">
+	          <span class="icon icon-x" aria-hidden="true"></span>
+	          <span class="fallback-text">{{ 'general.ui.close' | t }}</span>
+	        </button>
+	      </div>
+	    </div>
+	    <div class="modal-body">
+	    	<div class="shipping-form">
+	    		<div class="shipping-form__text">
+	    			{% if settings.ps_modal_title != blank %}
+                        <h2>{{ settings.ps_modal_title }}</h2>
+                    {% endif %}
+                    {% if settings.ps_modal_sub_title != blank %}
+                        <p>{{ settings.ps_modal_sub_title }}</p>
+                    {% endif %}
+	    		</div>
+	    		<div class="grid--full shipping-form__content">
+	    			<div class="grid__item {{settings.ps_modal_image_width}}">
+	    				{% if settings.ps_modal_image %}
+	    				<img src="{{ settings.ps_modal_image | img_url: 'master' }}">
+	    				{% endif %}
+	    			</div>
+	    			{% if settings.ps_modal_image_width == 'one-half' %}
+	    			<div class="grid__item one-half">
+	    				{{ settings.ps_text_details }}
+	    			</div>
+	    			{% endif %}
+	    		</div>
+	    		<div class="grid--full">
+	    			<div class="grid__item one-half text-right medium-down--hide">
+	    				{% case settings.ps_modal_dismiss_action %}
+	    				{% when 'cart' %}
+	    					{% assign dismiss_url = '/cart' %}
+	    				{% when 'checkout' %}
+	    					{% assign dismiss_url = '/checkout' %}
+	    				{% when 'page' %}
+	    					{% assign dismiss_url = '#' %}
+	    				{% endcase %}
+	    				<a href="{{dismiss_url}}" class="btn btn--special btn--special_no--color js-modal-close">{{ settings.ps_modal_no_btn_text }}</a>
+	    			</div>
+	    			<div class="grid__item medium-down--one-whole one-half">
+	    				{% unless product.options.size == 1 and product.variants[0].title == 'Default Title' %}
+						  {% assign has_variants = true %}
+						{% else %}
+						  {% assign has_variants = false %}
+						{% endunless %}
+	    				<form action="/cart/add" method="post" enctype="multipart/form-data" class="product-form product-card__form product-form-product_{{ product.id }}" data-section="product_{{ product.id }}" data-variants="false" data-action-type="{{ settings.ps_modal_atc_action }}" >
+					      {% if settings.ps_modal_atc_action contains 'add_to_cart' %}
+					        {% assign current_variant = product.selected_or_first_available_variant %}
+					        {% if settings.show_multiple_currencies and has_variants %}
+					          {% comment %}
+					            Used to replace currency in the dropdown
+					          {% endcomment %}
+					          <ul class="variant-prices-ref hide">
+					            {% for variant in product.variants %}
+					              {% if variant.available %}
+					                <li data-variant-id="{{ variant.id }}">{{ variant.price | money }}</li>
+					              {% endif %}
+					            {% endfor %}
+					          </ul>
+					        {% endif %}
+					        <select name="id" id="ProductSelect-product_{{ product.id }}" data-section="product_{{ product.id }}" class="product-form__variants {% if has_variants %}product-form__variants--has-variants{% else %}{% endif %} hide">
+								{% for variant in product.variants %}
+								{% if variant.available %}
+									<option {% if has_variants == false and variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" class="money">
+										{{ variant.title }} - {{ variant.price | money }}
+									</option>
+								{% else %}
+									<option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+								{% endif %}
+								{% endfor %}
+							</select>
+							<div class="product-form__item product-form__item--submit">
+					          <button type="submit" name="add" id="AddToCart-{{ section.id }}" {% unless current_variant.available %}disabled="disabled"{% endunless %} class="btn btn--special btn--full product-card__button product-form__cart-submit">
+					            <span>
+					              {{ settings.ps_modal_yes_btn_text }}
+					            </span>
+					          </button>
+					        </div>
+					      {% elsif btn_action == 'product_page' %}
+					        <a href="#" class="btn btn--special btn--full product-card__button">{{ settings.ps_modal_yes_btn_text }}</a>
+					      {% endif %}
+					    </form>
+	    			</div>
+	    			<div class="grid__item large--hide">
+	    				<a href="{{dismiss_url}}" class="btn btn--special btn--full btn--special_no--color js-modal-close">{{ settings.ps_modal_no_btn_text }}</a>
+	    			</div>
+	    		</div>
+	    		<div class="grid--full shipping-form__note">
+	    			<div class="grid__item one-whole">
+	    				{{ settings.ps_text_other_details }}
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
+    </div>
+</div>

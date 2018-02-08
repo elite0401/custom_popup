@@ -1,0 +1,77 @@
+.faqs_page_cls{padding:30px 0; width:100%; display:inline-block;}
+.standard-page__body h4{padding:30px 0 10px; text-align:left;}
+.faqs_page_cls .rte>div{margin:0;}
+.standard-page__body .content{padding:10px;}
+.accordion {
+  margin: 0;
+  padding:15px 10px;
+  border-top:#f0f0f0 1px solid;
+  background: #fff;
+  text-decoration:none;
+  color: #000;
+  font-size:1em;
+  position:relative;
+  font-weight: bold;
+  cursor:pointer;
+}
+.accordion-open {
+  background:#fff;
+  color: #000;
+}
+.accordion-open span {
+  display:block;
+  position:absolute;
+  right:3px;
+  top:25%;
+  padding:10px;
+}
+.accordion-open span {
+  background:url('') center center no-repeat;
+}
+.accordion-close span {
+  display:block;
+  position:absolute;
+  right:3px;
+  top:25%;
+  background:url('') center center no-repeat;
+  padding:10px;
+}
+.faqpage div.container {
+  padding:0;
+  margin:0;
+}
+.faqpage div.container {
+  max-width:100%;
+  padding:5px 0;
+}
+.faqpage div.content {
+  background:#fff;
+  margin: 0;
+  padding:10px;
+  font-size:.9em;
+  line-height:1.5em;
+}
+.faqpage div.content ul {
+  padding:0;
+  margin:0;
+  padding:3px;
+}
+.faqpage div.content p {
+  padding:0;
+  margin:3px 0 10px;
+  padding:3px;
+}
+.faqpage div.content ul li {
+  list-style-position:inside;
+  line-height:25px;
+}
+.sidebar-nav a, .sidebar-nav dt {
+  color: #000;
+  border-bottom: 0px !Important;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.sidebar-nav dd {
+  margin-left: 0px;
+  margin-bottom: 15px;
+}

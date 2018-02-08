@@ -1,0 +1,21 @@
+<!-- snippet/product-price.liquid -->
+{%- assign money_price = bold_price | money -%}
+
+
+<!-- Bold: Memberships (collection price) -->
+{% include 'bold-memberships-price' %}
+{% if bold_hide_item == false %}
+
+{% if bold_compare_at_price > bold_price %}
+  <s class="product-price__old">{{ bold_compare_at_price | money }}</s>
+  <span class="product-price__price product-price__sale">{{ money_price }}</span>
+{% else %}
+  <span class="product-price__price">{{ money_price }}</span>
+{% endif %}
+
+{% endif %}
+<!-- end Bold code -->
+
+{% unless product.available %}
+  <span class="product-price__sold-out">{{ 'products.product.sold_out' | t }}</span>
+{% endunless %}
