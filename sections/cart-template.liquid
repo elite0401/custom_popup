@@ -100,10 +100,12 @@
         <div class="grid__item one-whole large--one-third medium--one-third right cart_checkout_div">
           <button type="submit" name="checkout" class="btn btn--special btn--full cart__checkout-btn">{{ 'cart.general.checkout' | t }}</button>
           {% if additional_checkout_buttons %}
+          <span class="additional-checkout-buttons">
           <div class="addition_payment_div">
             <span>or pay with</span>
             <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
           </div>
+          </span>
           {% endif %}
         </div>
         <div class="grid__item one-whole large--one-third right medium--one-third">
@@ -304,6 +306,8 @@
   {% endif %}
 </div>
 {% endcomment %}
+
+{% include 'subscription-cart-footer' %}
 
 {% schema %}
   {
