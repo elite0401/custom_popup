@@ -57,8 +57,8 @@
 						{% else %}
 						  {% assign has_variants = false %}
 						{% endunless %}
-	    				<form action="/cart/add" method="post" enctype="multipart/form-data" class="product-form product-card__form product-form-product_{{ product.id }}" data-section="product_{{ product.id }}" data-variants="false" data-action-type="{{ settings.ps_modal_atc_action }}" data-productid="{{product.id}}">
-	    					{% if product.available %}{% include 'subscription-product' %}{% endif %}
+	    				<form action="/cart/add" method="post" enctype="multipart/form-data" class="product-form product-card__form product-form-product_{{ product.id }}" data-section="product_{{ product.id }}" data-variants="false" data-action-type="{{ settings.ps_modal_atc_action }}" >
+                          {% if product.available %}{% include 'subscription-product' %}{% endif %}
 					      {% if settings.ps_modal_atc_action contains 'add_to_cart' %}
 					        {% assign current_variant = product.selected_or_first_available_variant %}
 					        {% if settings.show_multiple_currencies and has_variants %}
@@ -73,7 +73,7 @@
 					            {% endfor %}
 					          </ul>
 					        {% endif %}
-					        <select name="id" data-productid="{{product.id}}" id="ProductSelect-product_{{ product.id }}" data-section="product_{{ product.id }}" class="product-form__variants {% if has_variants %}product-form__variants--has-variants{% else %}{% endif %} hide">
+					        <select name="id" id="ProductSelect-product_{{ product.id }}" data-section="product_{{ product.id }}" class="product-form__variants {% if has_variants %}product-form__variants--has-variants{% else %}{% endif %} hide">
 								{% for variant in product.variants %}
 								{% if variant.available %}
 									<option {% if has_variants == false and variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" class="money">
@@ -109,8 +109,3 @@
 	    </div>
     </div>
 </div>
-<style>
-  .rc_subscription-only {
-    display: none !important;
-  }
-</style>

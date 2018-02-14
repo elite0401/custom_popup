@@ -317,9 +317,9 @@ var ajaxCart = (function(module, $) {
         if (show_shipping_popup) {
           theme.ShippingModal.onlyShow();
         } else {
-        cartFeedback(img);
+          cartFeedback(img);
+        }
       }
-    }
     }
     // Product page action
     else {
@@ -330,9 +330,9 @@ var ajaxCart = (function(module, $) {
         if (show_shipping_popup) {
           theme.ShippingModal.onlyShow();
         } else {
-        cartFeedback(img, 'floating-cart--big');
+          cartFeedback(img, 'floating-cart--big');
+        }
       }
-    }
     }
 
   };
@@ -401,11 +401,11 @@ var ajaxCart = (function(module, $) {
     if (cart.item_count === 0) {
       $cartContainer
         .append('<p class="alert-info">' + {{ 'cart.general.empty' | t | json }} + '</p>');
+      $cartContainer
+        .append('<p class="text-center"><a href="/collections/all" class="btn btn--special">{{ 'cart.general.shop_now' | t }}</a></p>');
       cartCallback(cart);
       return;
     }
-
-
 
     // Handlebars.js cart layout
     var items = [],
@@ -501,17 +501,17 @@ var ajaxCart = (function(module, $) {
         window.location = '/checkout';
       }
     } else {
-    if ('{{ settings.ajax_cart_method }}' == 'popup' && theme.isMobile() || '{{ settings.ajax_cart_method }}' == 'popup') {
-      theme.cartModal.onlyShow();
-    } else if('{{ settings.ajax_cart_method }}' == 'page') {
-      window.location = '/cart';
-    } else {
-      $body.removeClass('drawer--is-loading');
-      $body.trigger('afterCartLoad.ajaxCart', cart);
-    }
-    if (window.Shopify && Shopify.StorefrontExpressButtons) {
-      Shopify.StorefrontExpressButtons.initialize();
-    }
+      if ('{{ settings.ajax_cart_method }}' == 'popup' && theme.isMobile() || '{{ settings.ajax_cart_method }}' == 'popup') {
+        theme.cartModal.onlyShow();
+      } else if('{{ settings.ajax_cart_method }}' == 'page') {
+        window.location = '/cart';
+      } else {
+        $body.removeClass('drawer--is-loading');
+        $body.trigger('afterCartLoad.ajaxCart', cart);
+      }
+      if (window.Shopify && Shopify.StorefrontExpressButtons) {
+        Shopify.StorefrontExpressButtons.initialize();
+      }
     }
   };
 

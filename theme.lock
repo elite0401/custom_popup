@@ -22,7 +22,7 @@ assets/BLACK-Week-English.png:
 assets/Christmas-Deals-English.png:
   development: 2017-11-20T11:33:13+01:00   7ed5bdbd2835b7fd405e31e035114cca
 assets/ajax-cart.js.liquid:
-  development: 2017-11-20T11:33:14+01:00   fd51161f884dfc47ac42889fa38a8f53
+  development: 2018-02-09T15:58:10+01:00   650db13fc2c933268057f019776b4676
 assets/ajax-loader.gif:
   development: 2017-11-20T11:33:14+01:00   deca8b0ecd6974227d157b6d7068995d
 assets/banner-placeholder.png:
@@ -190,9 +190,9 @@ assets/testi_bg_img.jpg:
 assets/theme-debug.js.liquid:
   development: 2017-11-20T11:33:23+01:00   f4b2e6b3d62c6bcfa7f04abb2b7df876
 assets/theme.js.liquid:
-  development: 2017-11-20T11:33:23+01:00   9b06767821bc94096b8eb37a80012c06
+  development: 2018-02-09T15:56:44+01:00   28de0c809a0baf832eec8b3564e18c78
 assets/theme.scss.liquid:
-  development: 2018-02-12T15:15:57+01:00   372a002f30e55eb4fcb1d521411c602f
+  development: 2018-02-14T17:25:48+01:00   efb9ded6c73ad9ab8e28ba4dba05a0f7
 assets/uk-product.png:
   development: 2017-11-20T11:33:23+01:00   837b7f77298696aa3a37131f30c648e6
 assets/vendor.js:
@@ -202,7 +202,7 @@ assets/warranty-gold.png:
 assets/wc-style.css.liquid:
   development: 2017-12-12T09:37:57+01:00   dc232fac271c02c758dbbaa3574e60eb
 config/settings_data.json:
-  development: 2018-02-01T11:50:58+01:00   52cf838b6ecce8c34daaba8159768536
+  development: 2018-02-14T17:20:23+01:00   186957696a65470139c9c390414f738e
 config/settings_schema.json:
   development: 2017-11-20T11:33:25+01:00   2e9960442c1a1e21b4f961b69665ee99
 layout/checkout.liquid:
@@ -232,7 +232,7 @@ sections/article-template.liquid:
 sections/blog-template.liquid:
   development: 2017-11-20T11:33:12+01:00   cb26539efe0d98b8169e6b0bb56d6949
 sections/cart-template.liquid:
-  development: 2018-01-04T06:41:20+01:00   7a9f2be1225593e9fab1184c0c858ea7
+  development: 2018-02-09T16:15:44+01:00   f20c29198760c01dc2cc99feaa0756de
 sections/collection-template.liquid:
   development: 2017-11-29T05:33:24+01:00   ceba7f30c5ae3169a98a24c46ec520f9
 sections/contact-page-template.liquid:
@@ -280,7 +280,7 @@ sections/password-content.liquid:
 sections/password-header.liquid:
   development: 2017-11-20T11:33:12+01:00   f8164d1ab95060b272235e7aaabd16be
 sections/product-template.liquid:
-  development: 2017-11-29T10:41:48+01:00   d2a9eaa61adb3a2bfa0871d1bdf5364c
+  development: 2018-02-14T07:24:45+01:00   466c084ff8d0a04501986475c628cdb3
 sections/separator.liquid:
   development: 2017-11-20T11:33:13+01:00   42b1cbd80a01ddd115c97e5ce4687bcf
 sections/slideshow.liquid:
@@ -450,7 +450,7 @@ snippets/shappify-select.liquid:
 snippets/shipping-calculator.liquid:
   development: 2017-11-20T11:33:25+01:00   94a2921f092a7aa390e14ccd025c9e53
 snippets/shipping-modal.liquid:
-  development: 2017-11-20T11:33:25+01:00   1eb206b73d33307dbe0fbde99089b38c
+  development: 2018-02-09T16:54:35+01:00   9aea6cbcf2cc7c5747007dfbe406efca
 snippets/social-icons-list.liquid:
   development: 2017-11-20T11:33:25+01:00   64ae04a1c69a588bae4eab646b228c62
 snippets/social-meta-tags.liquid:
@@ -478,7 +478,7 @@ templates/article.liquid:
 templates/blog.liquid:
   development: 2017-11-20T11:33:25+01:00   a6432db4e34f11d0b0830d613893dba7
 templates/cart.liquid:
-  development: 2017-11-20T11:33:25+01:00   d80af380ed923a17918f7ee93e24afd7
+  development: 2018-02-09T16:33:29+01:00   f76991dedf4854268fbe3eae55d20488
 templates/collection.liquid:
   development: 2017-11-20T11:33:25+01:00   5cbce9fda42e90353acd63be49fbef49
 templates/customers/account.liquid:
